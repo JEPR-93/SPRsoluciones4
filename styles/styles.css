@@ -1,0 +1,257 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Efecto hover para los enlaces */
+a:hover {
+    color: #058e83; /* Cambia el color al naranja al hacer hover */
+    transition: color 0.3s; /* Agregar una transición suave */
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para los productos utilizando CSS Grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.product p {
+    font-size: 14px;
+}
+
+.product .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product .buy-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto hover para los botones de compra */
+.product .buy-button:hover {
+    background-color: #058e83; /* Cambia el fondo al hacer hover */
+    color: #ffffff; /* Cambia el color del texto al oscuro al hacer hover */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-info h3, .social-media h3 {
+    font-size: 18px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+/* Efecto hover para los enlaces de redes sociales */
+.social-media a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+    transition: color 0.3s; /* Agregar una transición suave */
+}
+
+.social-media a:hover {
+    color: #058e83; /* Cambiar el color al naranja al hacer hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .search-input, .search-button {
+        width: 100%;
+    }
+}
+
+/* Estilos responsivos para dispositivos con un ancho máximo de 480px (por ejemplo, smartphones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Estilos para la sección de descripción de la empresa */
+.company-description {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.company-description .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.company-description .section-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.company-description p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de contactos */ 
+.contact-section {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section .section-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form .submit-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #058e83;
+}
