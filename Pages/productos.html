@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">   
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     </head>
 <body>
@@ -19,9 +19,20 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../Pages/productos.html">Productos</a></li>
+                    <li><a href="../Pages/productos.html"></a></li>
+                    <li class="dropdown">
+                        <a href="../Pages/productos.html">Productos</a>
+                        <div class="dropdown-content">
+                            <a href="#">Lectores de codigo de barra</a>
+                            <a href="#">Impresoras</a>
+                            <a href="#">Consumibles</a>
+                        </div>
+                    </li>
                     <li><a href="../Pages/acerca-de.html">Acerca de Nosotros</a></li>
-                    <li><a href="../Pages/contactos.html">Contacto</a></li>
+                    <li><a href="../Pages/contactanos.html">Contactanos</a></li>
+                    
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -36,55 +47,56 @@
         <section class="products">
             <!-- Producto 1 -->
             <article class="product">
-                <img src="../assets/img/impresoratemrica.png" alt="Producto 1">
+                <img src="../assets/img/impresoratemrica.png" alt="impresora termica">
                 <h2>Impresoras fiscales</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <span class="price">$19.99</span>
+                <p>La Impresora Fiscal HKA80 se caracteriza por su alta rapidez de impresión de tickets, cuenta con un diseño robusto y seguro cumpliendo así las normativas fiscales del país. </p>
+                <span class="price">$1.300</span>
                 <button class="buy-button">Comprar</button>
             </article>
 
             <!-- Producto 2 -->
             <article class="product">
-                <img src="../assets/img/Lector.png" alt="Producto 2">
+                <img src="../assets/img/lector.jpg" alt="Lector de codigo de barras">
                 <h2>Lector de codigo de barra</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lector de mano que ofrece resistencia y rápida lectura. Ideal para el trabajo de mayor volumen, mejorando así el servicio al cliente y reduciendo riesgos de errores en la digitación de los precios.</p>
                 <span class="price">$29.99</span>
                 <button class="buy-button">Comprar</button>
             </article>
 
             <!-- Producto 3 -->
             <article class="product">
-                <img src="../assets/img/caja registradora.png" alt="Producto 3">
+                <img src="../assets/img/caja registradora.png" alt="Caja Registradora">
                 <h2>Cajas registradoras</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <span class="price">$39.99</span>
+                <p>Equipo de impresión térmica de nueva tegnología y fabricada bajo altos estándares de calidad. Permite una fácil manipulación </p>
+                <span class="price">$950</span>
                 <button class="buy-button">Comprar</button>
             </article>
 
-            <!-- Producto 4 -->
+            
             <article class="product">
-                <img src="../assets/img/papeltermico.png" alt="Producto 4">
-                <h2>Consumibles</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <span class="price">$49.99</span>
+                <img src="../assets/img/papeltermico.png" alt="Papel termico">
+                <h2>Papel Termico</h2>
+                <p>Diferentes tipos de papel, Están especialmente diseñados para cada aplicación. Tienen una excelente calidad de imagen y garantizan una perfecta definición de los códigos de barras.
+                </p>
+                <span class="price">$40.00</span>
                 <button class="buy-button">Comprar</button>
             </article>
 
-            <!-- Producto 5 -->
+           
             <article class="product">
-                <img src="../assets/img/verificador.png" alt="Producto 4">
+                <img src="../assets/img/verificador.png" alt="Verificador de precios">
                 <h2>Verificador de precios</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <span class="price">$49.99</span>
+                <p>Son dispositivos compactos, económicos y fácil de instalar permite que los negocios disfruten de la practicidad del autoservicio en cada pasillo o departamento.</p>
+                <span class="price">$170.99</span>
                 <button class="buy-button">Comprar</button>
             </article>
 
-            <!-- Producto 6 -->
+           
             <article class="product">
-                <img src="../assets/img/monitor.png" alt="Producto 4">
+                <img src="../assets/img/monitor.png" alt="Monitor touch ">
                 <h2>Monitores</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <span class="price">$49.99</span>
+                <p>El monitor de pantalla táctil Advanced AP-15 con un diseño estilizado y sin bordes.compacto para una fácil integración</p>
+                <span class="price">$300.00</span>
                 <button class="buy-button">Comprar</button>
             </article>
         </section>
@@ -92,8 +104,8 @@
 
     <footer>
         <div class="container2">
-            <a href="../index.html">
-                <img src="../assets/img/spr logo.png" alt="Tu Emprendimiento Logo">
+            <a href="./index.html">
+                <img src="../assets/img/spr-logo-bn.png" alt="logo spr solucionoes">
             </a>
             <div class="footer-info">
                 <h3>Contacto</h3>
