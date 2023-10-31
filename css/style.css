@@ -373,12 +373,13 @@ footer {
 .service {
   flex: 0 0 33.3333333333%; /* Divide el ancho en tres partes iguales */
   padding: 20px;
-  border: 1px solid #ccc;
+  
   transition: transform 0.3s; /* Agregar una transición de transformación */
-  background-color: #fff;
+  background-color: #1f1e1e50;
   box-sizing: border-box; /* Incluye el padding en el ancho total */
-  text-align: justify; /* Centra el contenido */
-  margin: 0px;
+  text-align: start /* Centra el contenido */
+  margin: 0;
+  
 }
 
 .service:hover {

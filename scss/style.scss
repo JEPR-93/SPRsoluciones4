@@ -232,7 +232,6 @@ footer {
     }
 }
 
-/* Estilos para el carrusel */
 
 /* Estilos CSS para el carrusel */
 #productCarousel {
@@ -378,9 +377,9 @@ footer {
 .service {
     flex: 0 0 calc(100% / 3); /* Divide el ancho en tres partes iguales */
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #00000036;
     transition: transform 0.3s; /* Agregar una transición de transformación */
-    background-color: #fff;
+    background-color: #00000036;
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     text-align: justify; /* Centra el contenido */
     margin: 0px;
