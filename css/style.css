@@ -372,8 +372,7 @@ footer {
 
 .service {
   flex: 0 0 33.3333333333%; /* Divide el ancho en tres partes iguales */
-  padding: 20px;
-  
+  padding: 20px;  
   transition: transform 0.3s; /* Agregar una transición de transformación */
   background-color: #1f1e1e50;
   box-sizing: border-box; /* Incluye el padding en el ancho total */
