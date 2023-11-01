@@ -397,4 +397,15 @@ footer {
   }
 }
 
+@media (max-width: 900px) {
+  body header div {
+      display: flex;
+      flex-direction: column;        
+      align-items: center;
+  }
+  .full {
+      grid-template-rows: 174px auto 211px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
