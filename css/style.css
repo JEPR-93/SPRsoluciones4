@@ -164,6 +164,7 @@ a:hover {
   }
 }
 /* Estilos para el footer */
+
 footer {
   background-color: #333;
   color: #fff;
@@ -358,6 +359,7 @@ footer {
   display: block;
 }
 
+
 /* Estilos para la sección de servicios */
 .services {
   background-color: #f7f7f7;
@@ -368,26 +370,31 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-direction: row; /* Añadido para la dirección de flexión horizontal */
 }
 
 .service {
-  flex: 0 0 33.3333333333%; /* Divide el ancho en tres partes iguales */
-  padding: 20px;  
-  transition: transform 0.3s; /* Agregar una transición de transformación */
+  flex: 0 0 33.3333333333%;
+  padding: 20px;
+  transition: transform 0.3s;
   background-color: #1f1e1e50;
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  text-align: start /* Centra el contenido */
+  box-sizing: border-box;
+  text-align: start;
   margin: 0;
-  
 }
 
 .service:hover {
-  transform: scale(1.05); /* Efecto de zoom al pasar el mouse por encima */
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
+  .container3 {
+    flex-direction: column; /* Cambia la dirección de flexión a columna en pantallas más pequeñas */
+  }
+
   .service {
-    flex: 0 0 50%; /* Cuando el ancho de la pantalla es menor o igual a 768px, divide el ancho en dos partes iguales */
+    flex: 0 0 100%; /* Ocupa todo el ancho en pantallas más pequeñas */
+    margin-bottom: 20px; /* Añade un espacio entre los servicios en pantallas más pequeñas */
   }
 }
 
