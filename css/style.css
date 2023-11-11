@@ -1,13 +1,31 @@
 @charset "UTF-8";
+
+/* Variables */
+:root {
+  --main-bg-color: #f5f5f5;
+  --text-color: #fff;
+  --link-color: #058e83;
+  --header-bg-color: #333;
+  --footer-bg-color: #333;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mixin para efecto hover en enlaces */
+@mixin hoverEffect() {
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--main-bg-color);
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
@@ -21,7 +39,7 @@ main {
 }
 
 .full {
-  display:grid;
+  display: grid;
   height: 100vh;
 }
 
@@ -47,13 +65,13 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-weight: bold;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
   padding: 10px 0;
   text-align: center; /* Alinea el título en el centro */
 }
@@ -65,12 +83,11 @@ header h1 {
 
 /* Efecto hover para los enlaces */
 a {
-  color: #fff;
+  color: var(--text-color);
 }
 
 a:hover {
-  color: #058e83;
-  transition: color 0.3s;
+  @include hoverEffect;
 }
 
 /* Estilos para el contenedor de búsqueda */
@@ -89,8 +106,8 @@ a:hover {
 }
 
 .search-button {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -98,8 +115,8 @@ a:hover {
 }
 
 .search-button:hover {
-  background-color: #058e83; /* Cambia el fondo al color blanco al hacer hover */
-  color: #333; /* Cambia el color del texto al color de fondo oscuro al hacer hover */
+  background-color: var(--link-color); /* Cambia el fondo al color blanco al hacer hover */
+  color: var(--header-bg-color); /* Cambia el color del texto al color de fondo oscuro al hacer hover */
 }
 
 /* Estilos para los productos utilizando CSS Grid */
@@ -112,7 +129,7 @@ a:hover {
 .product {
   background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
   max-height: 1000px;
   overflow: auto;
@@ -138,8 +155,8 @@ a:hover {
 }
 
 .product .buy-button {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -149,13 +166,14 @@ a:hover {
 
 /* Efecto hover para los botones de compra */
 .product .buy-button:hover {
-  background-color: #058e83;
-  color: #ffffff;
+  background-color: var(--link-color);
+  color: var(--text-color);
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .search-input, .search-button {
+  .search-input,
+  .search-button {
     width: 100%;
   }
   .product {
@@ -171,22 +189,32 @@ a:hover {
 /* Estilos para el footer */
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--footer-bg-color);
+  color: var(--text-color);
   padding: 20px 0;
-  /* position: sticky; */
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
+  left: 0; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+  z-index: 100; /* Ajusta el índice z para que esté encima del contenido */
 }
+
+/* .container2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */
 
 .container2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 1200px; /* Ajusta según sea necesario */
+  margin: 0 auto;   /* Centra el contenido */
 }
 
-.container {
-  padding-bottom: 60px; /* Ajusta este valor para dar espacio al footer */
+.container2 {
+  padding-bottom: 6px; /* Ajusta este valor para dar espacio al footer */
 }
 
 /* Estilos para el logotipo en el footer */
@@ -195,7 +223,8 @@ footer {
 }
 
 /* Estilos para la información de contacto */
-.footer-info h3, .social-media h3 {
+.footer-info h3,
+.social-media h3 {
   font-size: 18px;
 }
 
@@ -206,13 +235,13 @@ footer {
 /* Efecto hover para los enlaces de redes sociales */
 .social-media a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   margin-right: 10px;
   transition: color 0.3s; /* Agregar una transición suave */
 }
 
 .social-media a:hover {
-  color: #058e83; /* Cambiar el color al verde al hacer hover */
+  color: var(--link-color); /* Cambiar el color al verde al hacer hover */
 }
 
 .logo {
@@ -257,7 +286,7 @@ footer {
 .product {
   background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
   margin: 10px;
 }
@@ -297,7 +326,7 @@ footer {
 .product {
   background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
   margin: 10px;
   height: 350px; /* Ajusta la altura según tu preferencia */
@@ -356,14 +385,13 @@ footer {
 
 /* Cambiar el color de fondo cuando el mouse pasa por encima */
 .dropdown-content a:hover {
-  background-color: #058e83; /* Puedes cambiar este color al que desees */
+  background-color: var(--link-color); /* Puedes cambiar este color al que desees */
 }
 
 /* Mostrar el submenú cuando el mouse pasa por encima */
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 /* Estilos para la sección de servicios */
 .services {
@@ -405,13 +433,12 @@ footer {
 
 @media (max-width: 900px) {
   body header div {
-      display: flex;
-      flex-direction: column;        
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .full {
-      grid-template-rows: 174px auto 211px;
+    grid-template-rows: 174px auto 211px;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
